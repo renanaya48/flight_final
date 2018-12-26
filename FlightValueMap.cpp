@@ -1,7 +1,11 @@
 
 #include "FlightValueMap.h"
 
+/**
+ * initalize the map
+ */
 void FlightValueMap::initalize() {
+    //insert the flight values to the map, at the begging the value is 0
     this->mapOfFlightValue.insert(pair<string, double>(
             "/instrumentation/airspeed-indicator/indicated-speed-kt", 0));
     this->mapOfFlightValue.insert(pair<string, double>(
@@ -54,23 +58,31 @@ void FlightValueMap::initalize() {
             pair<string, double>("/engines/engine/rpm", 0));
 
 }
-
+/**
+ * update the map according to the string
+ * @param values  the value to update to
+ */
 void FlightValueMap::updateMap(string values) {
     char *charLine = const_cast<char *>(values.c_str());
     char *splitValues = strtok(charLine, ",");
     map<string, double>::iterator mapIter;
+    //check if the value the function got is in the map
     for (mapIter = this->mapOfFlightValue.begin();
          mapIter != this->mapOfFlightValue.end(); mapIter++) {
         if ((*mapIter).first == "/instrumentation/altimeter/indicated-altitude-ft"){
             cout << (*mapIter).first <<endl;
             cout << (*mapIter).second <<endl;
         }
+        //update
         (*mapIter).second = atof(splitValues);
         splitValues = strtok(NULL, ",");
     }
 }
 
-
+/**
+ *
+ * @return the map
+ */
 map<string,double> FlightValueMap::getFlightVauleMap(){
     return this->mapOfFlightValue;
 }
