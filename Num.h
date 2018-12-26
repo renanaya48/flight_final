@@ -1,6 +1,3 @@
-//
-// Created by Administrator on 10/12/2018.
-//
 #include <string>
 #include "string.h"
 #include <unordered_map>
@@ -12,7 +9,9 @@ using namespace std;
 #ifndef PROJECT1_NUM_H
 #define PROJECT1_NUM_H
 
-
+/**
+ * Num class inheritors Expression
+ */
 class Num : public Expression
 {
 //Members
