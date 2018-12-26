@@ -17,12 +17,28 @@
 #include <vector>
 
 using namespace std;
+/**
+*lexer class
+*/
 class lexer {
+    //member
     string fileName;
 
 public:
+      /**
+     * constructor
+     * @param name the name of the file to read from
+     */
     lexer(string name);
+     /**
+     * the function gets a file and read every word.
+     * each word will be in a differend place.
+     * @return a vector which every word is in a different place.
+     */
     vector<string> lexerFile();
+    /**
+    * distructor
+    */
     ~lexer(){}
 };
 
