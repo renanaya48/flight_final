@@ -6,7 +6,7 @@
 
 using namespace std;
 /**
-* PathMap
+* PathMap class
 */
 class PathMap {
     //member
