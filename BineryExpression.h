@@ -16,7 +16,9 @@ public:
         this->leftArgument = leftArgument;
         this->rightArgument = rightArgument;
     }
-
+    /**
+     * distructor
+     */
     ~BineryExpression(){}
 };
 #endif //PROJECT1_BINERYEXPRESSION_H
