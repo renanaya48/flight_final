@@ -75,7 +75,7 @@ void ConditionParser::createCommand(vector<string>::iterator &vectorIt) {
         while ((*vectorIt) != ";"){
             vectorIt++;
         }
-        //move the iterator 1
+        //move the iterator +1
         vectorIt++;
     }
 }
