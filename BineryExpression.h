@@ -6,15 +6,20 @@
 #include <iostream>
 #include <cmath>
 #include "Expression.h"
-//BineryExpression class
+
+/**
+*BineryExpression class
+*/
+
 class BineryExpression {
+    //members
 protected:
     //members
     Expression *leftArgument;
     Expression *rightArgument;
 
 public:
-       /**
+/**
      * The BinaryExpression constructor by two expression and operator.
      *
      * @param leftArgument  the left side argument
@@ -25,6 +30,7 @@ public:
         this->leftArgument = leftArgument;
         this->rightArgument = rightArgument;
     }
+
     /**
      * distructor
      */
