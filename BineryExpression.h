@@ -27,6 +27,10 @@ public:
         this->leftArgument = leftArgument;
         this->rightArgument = rightArgument;
     }
+    
+    /**
+     * distructor
+     */
 
     ~BineryExpression(){}
 };
