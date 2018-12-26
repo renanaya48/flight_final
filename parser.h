@@ -20,7 +20,11 @@
 using namespace std;
 
 
+/**
+ * parser class
+ */
 class parser {
+    //members
     CommandMap* commands;
     SymbolTable* symbols;
     CheckConnection* connection;
@@ -31,9 +35,18 @@ class parser {
     list<Expression*> toDelete;
 
 public:
+        /**
+     * constructor
+     */
     parser();
+        /**
+     * the function gets a vector and parser it by words
+     * @param v the vector the function gets
+     */
     void runParser(vector<string> v);
-
+    /**
+    *distructor
+    */
     ~parser(){
         delete this->stringControl;
         delete this->connection;
