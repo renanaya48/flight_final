@@ -6,15 +6,15 @@
 
 using namespace std;
 /**
-*PathMap
+* PathMap class
 */
 class PathMap {
     //member
     map<string,string> pathMap;
 public:
     /**
-     * constructor
-     */
+    * constructors
+    */
     PathMap(){}
         /**
      * add to the map
