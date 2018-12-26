@@ -19,14 +19,31 @@
 
 using namespace std;
 
+/**
+ * class ConnectCommand inheritors Command
+ */
 class ConnectCommand : public Command {
+    //members
     CheckConnection* isConnected;
     StringFlightControls* flightString;
     ExitServer* toExit;
 
 public:
+    /**
+     * connection client
+     * @param args agrs
+     * @return
+     */
     ConnectCommand(CheckConnection* check, StringFlightControls* flightStr, ExitServer* exit);
+     /**
+     *
+     * @param vectorIt the iterator
+     * @return 0 when done
+     */
     virtual int execute(vector<string>::iterator &vectorIt);
+    /**
+    * distructor
+    */
     ~ConnectCommand(){}
 };
 
