@@ -1,6 +1,10 @@
 #include "VarCommand.h"
 
-
+/**
+ * execute
+ * @param vectorIt the vector
+ * @return 0 when done
+ */
 int VarCommand::execute(vector<string>::iterator &vectorIt){
     int countSteps=0;
     string varName = (*vectorIt);
